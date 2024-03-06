@@ -28,6 +28,7 @@ window.onload = () => {
       "during my lunch",
       "while I was praying"
     ];
+
     const whoNew = Math.floor(Math.random() * who.length);
     const actionNew = Math.floor(Math.random() * action.length);
     const whatNew = Math.floor(Math.random() * what.length);
@@ -40,6 +41,7 @@ window.onload = () => {
       when: when[whenNew]
     };
   };
+
   // función para actualizar el contenido de la excusa incluyendo las imagenes
   const updateExcuse = () => {
     const excuse = newExcuse();
@@ -54,10 +56,10 @@ window.onload = () => {
       imageContainer = document.createElement("div");
       imageContainer.id = "img-container";
       document.body.appendChild(imageContainer);
-    } else {
-      // Vacía el contenedor antes de agregar la nueva imagen
-      imageContainer.innerHTML = "";
     }
+
+    // Vacía el contenedor antes de agregar la nueva imagen
+    imageContainer.innerHTML = "";
 
     // Crea un elemento de imagen para la excusa actual
     const imageElement = document.createElement("img");
